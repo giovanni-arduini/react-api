@@ -4,6 +4,7 @@ import style from "./Main.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import Tags from "../Tags/Tags";
+import axios from "axios";
 
 const API_BASE_URI = "http://localhost:3000/";
 
@@ -46,6 +47,19 @@ export default function Main() {
       }`
     );
   }, [formData.published]);
+
+  function fetchPosts() {
+    axios
+      .get(`${API_BASE_URI}posts`)
+      .then((res) => {
+        console.log("post res", res);
+      })
+      .catch((err) => console.err(err));
+  }
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   // FORM ---
 
