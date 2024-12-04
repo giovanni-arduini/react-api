@@ -1,9 +1,11 @@
 import Card from "../posts/Card";
-import { posts as initialPosts } from "../../posts";
+// import { posts as initialPosts } from "../../posts";
 import style from "./Main.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import Tags from "../Tags/Tags";
+
+const API_BASE_URI = "http://localhost:3000/";
 
 export default function Main() {
   // console.log("Render Main");
@@ -17,7 +19,7 @@ export default function Main() {
     published: true,
   };
 
-  const [posts, setPosts] = useState(initialPosts);
+  const [posts, setPosts] = useState([]);
   const [publishedPost, setPublishedPost] = useState([]);
   // const publishedPost = posts.filter((post) => post.published === true);
   const [tags, setTags] = useState([]);
