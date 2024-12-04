@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 3rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+
+  * {
+    border-radius: 1rem;
+    border: none;
+    padding: 0.5rem;
+    background-color: aliceblue;
+  }
+}
+
+.tagList {
+  display: flex;
+  gap: 2rem;
+}
+
+.tagEl {
+  display: flex;
+  gap: 0.5rem;
+}
