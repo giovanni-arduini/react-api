@@ -130,10 +130,10 @@ export default function Main() {
               value={formData.category}
             >
               <option value="">Seleziona categoria</option>
-              <option value="backend">Backend</option>
-              <option value="frontend">Frontend</option>
-              <option value="express">Express</option>
-              <option value="react">React</option>
+              <option value="backend">Antipasti</option>
+              <option value="frontend">Primi</option>
+              <option value="express">Secondi</option>
+              <option value="react">Dessert</option>
             </select>
 
             <textarea
