@@ -53,8 +53,9 @@ export default function Main() {
       .get(`${API_BASE_URI}posts`)
       .then((res) => {
         console.log("post res", res);
+        setPosts(res.data.posts);
       })
-      .catch((err) => console.err(err));
+      .catch((err) => console.log(err));
   }
 
   useEffect(() => {

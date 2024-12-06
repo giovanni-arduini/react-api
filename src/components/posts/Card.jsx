@@ -32,7 +32,7 @@ export default function card(props) {
     <div className={style.card}>
       <img
         className={style.thumbnail}
-        src={props.image ? image : placeholder}
+        src={image ? image : placeholder}
         alt=""
       />
 
@@ -40,7 +40,10 @@ export default function card(props) {
         <h3 className={style.title}>{title}</h3>
         <div key={id}>
           {tags.map((tag) => (
-            <span key={tag} className={` ${style.cardTag} ${style[tag]}`}>
+            <span
+              key={tag}
+              className={` ${style.cardTag} ${style[tag.split(" ").join("")]}`}
+            >
               {/* `${getClassByTag(tag)} si poteva inserire tra le classi dopo la logica switch sopra*/}
               {tag}
             </span>
